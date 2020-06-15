@@ -49,7 +49,7 @@ export default function SampleNav({navigation}) {
             return (
               // <View><Text> {global.MyVar} </Text></View>
                             
-           console.log(global.SampleVar),
+           console.log(global.token),
               
               navigation.navigate('AddTeacher',j)
             )

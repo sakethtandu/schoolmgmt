@@ -20,7 +20,7 @@ export default class App extends React.Component {
     
   // global.SampleVar = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzYWtldGgiLCJyb2xlIjoiUk9MRV9hZG1pbiIsInNjaG9vbElkIjoyLCJleHAiOjE1OTM4NDI1OTUsImlhdCI6MTU5MTc2ODk5NX0.pB4PV7TG4Cr54xbpJkYMrMkbkHvd4y_Dm2_txt2iSPs"
   
-  global.SampleVar =  this.getData().then(value => console.log("jwt" + value));
+  global.SampleVar =  this.getData().then(value => global.token = value);
   
   // console.log(JSON.parse(global.SampleVar))
 
@@ -139,7 +139,7 @@ getData = async () => {
           // this.test(token)
           this.storeData(token)
         //  this.getData()
-          this.props.navigation.navigate('Principal', res, token)
+          this.props.navigation.navigate('Principal', res)
 
         }
       })

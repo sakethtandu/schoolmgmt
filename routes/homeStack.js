@@ -2,6 +2,7 @@ import { createAppContainer } from 'react-navigation';
 import Home from '../screens/home';
 //import R
 import React from 'react';
+import Principal from '../principal/principal';
 import SampleNav from '../screens/sampleNav';
 import Header from '../shared/header';
 //import Home from '../screens/home';
@@ -29,9 +30,9 @@ const screens = {
 //   ReviewDetails: {
 //     screen: ReviewDetails,
 //   },
-SampleNav:
+Principal:
 {
-    screen: SampleNav,
+    screen: Principal,
     navigationOptions: {
       title: 'Details',
       //headerStyle: { backgroundColor: '#eee' }

@@ -44,46 +44,14 @@ export default class App extends React.Component {
       });
   }
   
-  setItemStorage = async (key, value) => {
-    try {
-      await AsyncStorage.setItem('key', 'value');
-    }
-    catch (error){
-  
-    }
-    }
   
   
-  getItemStorage = async (key) => {
-    try {
-  await AsyncStorage.getItem('key');
-  if (value !== null)
-  {
-    return value
   
-    }
-  }
-  catch(err){
-  
-  }
-  }
-  
-  saveStorage = () => 
-  {
-    this.setItemStorage("jwtToken" , "jdfhajdshgkjahfukhafhaaljfshdakshga")
-  }
-  
-  readStorage = () => {
-    this.getItemStorage("jwtToken").then(result => {
-      alert("result"+ result)
-    })
-  }
-
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.logo}>Welcome</Text>
-        <View style={styles.inputView} >
+        <View style={styles.inputView}>
           <TextInput
             style={styles.inputText}
             placeholder="Mobile Number"
@@ -105,6 +73,7 @@ export default class App extends React.Component {
         </View> */}
         {/* <TouchableOpacity onPress={() => this.getDataUsingGet()} style={styles.loginBtn}> */}
         <TouchableOpacity onPress={() => { this.getDataUsingGet() }} style={styles.loginBtn}>
+        {/* <TouchableOpacity onPress={() => console.log("about.js")} style={styles.loginBtn}> */}
 
           {/* <TouchableOpacity onPress={() => navigation.navigate('SampleNav', text)} style={styles.loginBtn}> */}
          <Text style={styles.loginText}>LOGIN</Text>
